@@ -54,6 +54,10 @@ export default function Register() {
     formData.append("password",users.password);
     formData.append("image",users.image);
     console.log(users.userName +" "+users.email+" "+users.password)
+
+    // (let data of formData.entries()){
+    //     console.log(data);
+    // }
     const {data} = await axios.post(`https://ecommerce-node4.vercel.app/auth/signup`, formData);
     if(data.message == 'success')
     {
